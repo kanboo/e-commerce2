@@ -2,7 +2,7 @@
   <div
     class="flex flex-col justify-center items-start space-y-5 md:flex-row md:space-x-5"
   >
-    <div class="border border-red mt-16">
+    <div class="border border-red mt-8 md:mt-16">
       <iframe
         width="360"
         height="640"
@@ -41,7 +41,7 @@
           ></div>
 
           <div
-            class="flex justify-start items-center text-sm text-gray-600 mb-1"
+            class="w-full flex justify-start items-center text-sm text-gray-600 mb-1"
           >
             <span>{{ product.genderName }}</span>
             <span class="ml-auto">{{ product.sizeRange }}</span>
@@ -81,7 +81,8 @@ export default {
 
         const minSize = item.sizes[0]["name"];
         const maxSize = item.sizes[item.sizes.length - 1]["name"];
-        const sizeRange = `${minSize}-${maxSize}`;
+        const sizeRange =
+          minSize === maxSize ? `${minSize}` : `${minSize}-${maxSize}`;
 
         const flags = item.representative.flags.productFlags.map((flag) => {
           return flag.name;
