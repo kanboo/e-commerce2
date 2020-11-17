@@ -1,8 +1,8 @@
 <template>
   <div
-    class="flex flex-col justify-center items-start space-y-5 md:flex-row md:space-x-5"
+    class="flex flex-col justify-center items-start space-y-8 md:flex-row md:space-x-5 md:space-y-0"
   >
-    <div class="border border-red mt-8 md:mt-16">
+    <div class="border border-red mt-8 md:mt-10">
       <iframe
         width="360"
         height="640"
@@ -142,7 +142,7 @@ export default {
 <style scoped>
 @media screen and (min-width: 768px) {
   .product-list {
-    height: calc(100vh - 240px);
+    height: calc(100vh - 175px);
   }
 }
 </style>

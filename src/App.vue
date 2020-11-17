@@ -1,6 +1,6 @@
 <template>
   <div class="container h-screen mx-auto px-2">
-    <div class="flex justify-center items-center pt-8">
+    <div class="flex justify-center items-center pt-3">
       <img :src="ICON_UNIQLO" class="w-48" alt="Uniqlo" />
       <i class="fas fa-times text-3xl text-gray-500"></i>
       <img :src="ICON_HANDSUP" class="w-48 mx-3" alt="HandsUP" />
