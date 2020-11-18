@@ -1,0 +1,6 @@
+{
+  "name": "Uniqlo",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./Uniqlo.vue"
+}

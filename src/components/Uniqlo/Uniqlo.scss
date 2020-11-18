@@ -1,0 +1,7 @@
+.Uniqlo {
+  @media screen and (min-width: 768px) {
+    .product-list {
+      height: calc(100vh - 175px);
+    }
+  }
+}

@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import Uniqlo from "./components/Uniqlo.vue";
+import Uniqlo from "./components/Uniqlo";
 
 import ICON_HANDSUP from "@/assets/handsup.svg";
 import ICON_UNIQLO from "@/assets/uniqlo.png";
@@ -32,9 +32,7 @@ export default {
 
 <style>
 @import "tailwindcss/base";
-
 @import "tailwindcss/components";
-
 @import "tailwindcss/utilities";
 
 #app {

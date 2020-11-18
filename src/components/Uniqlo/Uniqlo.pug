@@ -1,0 +1,41 @@
+.Uniqlo.flex.flex-col.justify-center.items-start.space-y-8(class='md:flex-row md:space-x-5 md:space-y-0')
+  //- Video
+  .border.border-red.mt-8(class='md:mt-10')
+    iframe(
+      width='360'
+      height='640'
+      src='https://handsup.shop/wego/live/22179'
+      frameborder='0'
+      allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+      allowfullscreen=''
+      scrolling='no'
+    )
+
+  //- Product
+  .flex-1.max-w-2xl
+    //- Tabs
+    ul.flex.px-2.border-b.mb-2
+      li.mr-1.text-center(v-for='tab in tabs' :key='tab')
+        a.bg-white.inline-block.py-2.px-4.text-gray-500.font-semibold.cursor-pointer(
+          class='hover:text-blue-800'
+          :class="activeClass(tab)" 
+          @click='handleTab(tab)'
+        ) {{ tab.toUpperCase() }}
+    
+    //- List
+    ul.product-list.overflow-y-scroll.w-full.flex.justify-start.items-stretch.flex-wrap
+      li.flex.flex-col.justify-start.items-start.w-40.mx-2.mb-3(
+        v-for='product in normalizeProductList'
+        :key='product.imageUrl'
+        class='md:w-48'
+      )
+        .w-full.mx-auto.bg-gray-400.h-48.bg-top.bg-cover.mb-1(
+          class='md:w-48'
+          :style='{ backgroundImage: `url(${product.imageUrl})` }'
+        )
+        .w-full.flex.justify-start.items-center.text-sm.text-gray-600.mb-1
+          span {{ product.genderName }}
+          span.ml-auto {{ product.sizeRange }}
+        p.font-black {{ product.name }}
+        span.text-xs.text-gray-700.mt-auto {{ product.flags }}
+        p.text-lg.font-black {{ product.price }}
